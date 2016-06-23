@@ -1,0 +1,12 @@
+{
+  "name": "responsive-img-examples",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.1",
+    "picturefill": "~3.0.2"
+  },
+  "devDependencies": {
+    "chai": "~3.5.0",
+    "mocha": "~2.5.3"
+  }
+}
