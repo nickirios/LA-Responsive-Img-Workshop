@@ -1,8 +1,55 @@
 // bower:scss
 // endbower
 
+html {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	&::before, &::after {
+		-moz-box-sizing: inherit;
+		box-sizing: border-box;
+	}
+}
+
 body {
 	background: #fafafa;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #333;
+	max-width: 81.25rem;
+	margin: 0 auto;
+	// padding: 0 0.5rem;
+	padding-bottom: 5rem;
+}
+
+h2 {
+	margin-top: 5rem;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.container {
+	
+	@media screen and (min-width: 43.75em){//700px
+		display: flex;
+		aside {
+			width: 20%;
+		}
+		img {
+			width: 80%;
+		}
+	}
+	@media screen and (min-width: 81.25em){//1300px
+		aside {
+			width: 30%;
+		}
+		img {
+			width: 70%;
+		}
+	}
 }
