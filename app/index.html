@@ -31,31 +31,68 @@
 
 		<h2>Display Density Descriptors</h2>
 		<p>Use display density descriptors for resolution switching.</p>
-
+		<img srcset="images/kitten-2x.jpg 2x,
+					 images/kitten.jpg"
+			src="images/kitten.jpg"
+			alt="alt text here"
+		>
 
 		<h2>Width Descriptors</h2>
 		<p>Use width descriptors for hinting to the browser what size to use.</p>
-
+		<img srcset="https://placeholdit.imgix.net/~text?txtsize=56&txt=475%C3%97950&w=950&h=475 950w,
+					 https://placeholdit.imgix.net/~text?txtsize=56&txt=400%C3%97800&w=800&h=400 800w,
+					 https://placeholdit.imgix.net/~text?txtsize=56&txt=460%C3%97460&w=460&h=460 500w,
+					 https://placeholdit.imgix.net/~text?txtsize=56&txt=280%C3%97280&w=280&h=280 320w"
+			sizes="100vw"
+			src="https://placeholdit.imgix.net/~text?txtsize=56&txt=280%C3%97280&w=280&h=280"
+			alt="alt text here"
+		>
 
 		<h2>Sizes Attr</h2>
 		<p>The sizes attribute is required when using width descriptors but not for display density descriptors.</p>
 
 		<h3>100vw</h3>
-
+		<img srcset="https://placeholdit.imgix.net/~text?txtsize=56&txt=475%C3%97950&w=950&h=475 950w,
+					 https://placeholdit.imgix.net/~text?txtsize=56&txt=400%C3%97800&w=800&h=400 800w,
+					 https://placeholdit.imgix.net/~text?txtsize=56&txt=460%C3%97460&w=460&h=460 500w,
+					 https://placeholdit.imgix.net/~text?txtsize=56&txt=280%C3%97280&w=280&h=280 320w"
+			sizes="100vw"
+			src="https://placeholdit.imgix.net/~text?txtsize=56&txt=280%C3%97280&w=280&h=280"
+			alt="alt text here"
+		>
 
 		<h3>Calc() to account for padding</h3>
-
+		<img srcset="https://placeholdit.imgix.net/~text?txtsize=56&txt=475%C3%97950&w=950&h=475 950w,
+					 https://placeholdit.imgix.net/~text?txtsize=56&txt=400%C3%97800&w=800&h=400 800w,
+					 https://placeholdit.imgix.net/~text?txtsize=56&txt=460%C3%97460&w=460&h=460 500w,
+					 https://placeholdit.imgix.net/~text?txtsize=56&txt=280%C3%97280&w=280&h=280 320w"
+			sizes="calc(100vw - 1rem)"
+			src="https://placeholdit.imgix.net/~text?txtsize=56&txt=280%C3%97280&w=280&h=280"
+			alt="alt text here"
+		>
 
 		<h3>Using @media in sizes attr</h3>
 		<div class="container">
 			<aside>
 				<p>Some sidebar stuff here.</p>
 			</aside>
-
+			<img srcset="https://placeholdit.imgix.net/~text?txtsize=60&txt=1300%C3%97337&w=1300&h=532 1300w,
+						 https://placeholdit.imgix.net/~text?txtsize=60&txt=700%C3%97500&w=700&h=500 700w,
+						 https://placeholdit.imgix.net/~text?txtsize=28&txt=400%C3%97157&w=400&h=157 400w"
+				sizes="(min-width: 81.25rem) 70vw,
+						(min-width: 43.75em) 80vw,
+						100vw"
+				src="https://placeholdit.imgix.net/~text?txtsize=28&txt=400%C3%97157&w=400&h=157"
+				alt="alt text here"
+			>
 		</div>
 
 		<h2>Picture Element</h2>
-
+		<picture>
+			<source media="(min-width: 81.25em)" srcset="images/skyline-L.jpg">
+			<source media="(min-width: 25em)" srcset="images/skyline-S.jpg">
+			<img src="images/skyline-S.jpg" alt="cat">
+		</picture>
 
 		<!-- build:js scripts/vendor.js -->
 		<!-- bower:js -->
